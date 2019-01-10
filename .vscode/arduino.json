@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:uno",
-    "port": "/dev/cu.usbmodem143101",
-    "sketch": "Arduino/Leer-EMG-Sensor/Leer-EMG-Sensor.ino"
-}
