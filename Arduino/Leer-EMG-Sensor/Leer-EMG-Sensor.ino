@@ -5,7 +5,8 @@
 
 #include "SPI.h"
 
-int x = 0;
+int pin = A0;
+//int x = 0;
 
 void setup() {
   //Baud rates:300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200
@@ -13,5 +14,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(x));
+  Serial.println(analogRead(pin));
+  delay(1);
 }
