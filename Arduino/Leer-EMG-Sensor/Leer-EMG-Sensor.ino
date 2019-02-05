@@ -3,10 +3,9 @@
     (Abrir la terminal del arduino)
 */
 
-#include "SPI.h"
 
 //Pin en el que se ha conectado el sensor
-int pin = A0;
+int inputPin = A0;
 
 void setup(){
   //Baud rates:300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200
@@ -14,6 +13,33 @@ void setup(){
 }
 
 void loop(){
-  Serial.println(analogRead(pin));
+  Serial.println(analogRead(inputPin));
+  
   delay(1);
 }
+/*
+int onboardLED = 13;            // Arduino onboard LED (pin 13) you can control
+int voltageThreshold = 400;     // any reading higher will trigger an action
+
+void setup() {
+  // put your setup code here, to run when Arduino is powered on:
+  Serial.begin(9600);
+  pinMode(onboardLED, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int currentVoltage = analogRead(A0);  // store the incoming voltage 
+  Serial.print(currentVoltage);         // prints voltage to monitor
+  
+  if(currentVoltage > voltageThreshold){
+     // trigger actions
+     Serial.println(" CONTRACTION!"); // prints string + new line
+     digitalWrite(onboardLED, HIGH);  //this sends 5V, turning on LED
+  } else {
+      Serial.println("");             //adds a new line
+     digitalWrite(onboardLED, LOW); 
+     // turn off the light as threshold is not met
+  }
+}
+*/
