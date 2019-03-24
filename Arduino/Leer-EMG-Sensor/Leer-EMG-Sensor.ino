@@ -15,7 +15,7 @@ void setup(){
 void loop(){
   Serial.println(analogRead(inputPin));
   
-  delay(10);
+  delay(20);
 }
 
 //int onboardLED = 13;            // Arduino onboard LED (pin 13) you can control
