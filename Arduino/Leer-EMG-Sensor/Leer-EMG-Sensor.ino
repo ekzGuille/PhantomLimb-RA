@@ -6,6 +6,7 @@
 
 //Pin en el que se ha conectado el sensor
 int inputPin = A5;
+int contador = 1;
 
 void setup(){
   //Baud rates:300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200
@@ -13,9 +14,11 @@ void setup(){
 }
 
 void loop(){
-  Serial.println(analogRead(inputPin));
-  
-  delay(20);
+    contador = contador + 2;
+    // Habra que hacer un Serial.write() del analogRead()
+    //Serial.println(analogRead(inputPin));
+    Serial.println(contador);
+    delay(20);
 }
 
 //int onboardLED = 13;            // Arduino onboard LED (pin 13) you can control
