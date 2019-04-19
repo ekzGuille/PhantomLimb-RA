@@ -16,9 +16,21 @@ void setup(){
 void loop(){
     contador = contador + 2;
     // Habra que hacer un Serial.write() del analogRead()
-    //Serial.println(analogRead(inputPin));
+    
+    /*
+     * El Serial.write() se utiliza para envío de datos "crudos" entre componentes,
+     * para el envío de datos legibles por el humano se emplea Serial.println()
+     * 
+     * En Unity se lee de distinta manera:
+     * Serial.write() ---> serial.ReadByte();
+     * Serial.println() ---> serial.ReadLine();
+     * 
+     * 
+     */
+    
+    //Serial.println(analogRead(inputPin));  
     Serial.println(contador);
-    delay(20);
+    delay(500);
 }
 
 //int onboardLED = 13;            // Arduino onboard LED (pin 13) you can control
