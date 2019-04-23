@@ -10,6 +10,8 @@ ModelImporter:
     100008: //RootNode
     100010: pie_L
     100012: tibiaPerone_L
+    100014: abdomen_L
+    100016: cadera_L
     400000: Armature
     400002: dedosPie_L
     400004: femur_L
@@ -17,6 +19,8 @@ ModelImporter:
     400008: //RootNode
     400010: pie_L
     400012: tibiaPerone_L
+    400014: abdomen_L
+    400016: cadera_L
     2100000: MBlab_human_skin
     4300000: human_female_base01_002
     7400000: Default Take
