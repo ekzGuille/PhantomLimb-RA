@@ -13,8 +13,8 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        btnStart.onClick.AddListener(() => ChangeScene("SampleScene"));
-        btnOptions.onClick.AddListener(() => ChangeScene("SampleScene"));
+        btnStart.onClick.AddListener(() => ChangeScene("GameScene"));
+        btnOptions.onClick.AddListener(() => ChangeScene("Settings_Menu"));
         btnExit.onClick.AddListener(Application.Quit);
     }
 
