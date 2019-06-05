@@ -19,13 +19,12 @@ public class SkinController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        piernaL.SetActive(false);
+        piernaR.SetActive(true);
         slider.onValueChanged.AddListener((value) => ChangeSkinLeg(value));
 
-        // m_skin = Resources.Load("m_skin", typeof(Material)) as Material;
-        // m_skin_light = Resources.Load("m_skin_light", typeof(Material)) as Material;
-        // m_skin_dark = Resources.Load("m_skin_dark", typeof(Material)) as Material;
-
-        //pierna.GetComponent<MeshRenderer>().material = m_skin;
+        dropdown.onValueChanged.AddListener((valor) => ChangeLeg(valor));
+      
     }
 
     // Update is called once per frame
@@ -82,5 +81,18 @@ public class SkinController : MonoBehaviour
         }
     }
 
-
+    void ChangeLeg(int value)
+    {
+        if(value == 0)
+        {
+            // Mostrar pierna derecha
+            piernaL.SetActive(false);
+            piernaR.SetActive(true);
+        }else
+        {
+            // Mostrar pierna izquierda
+            piernaR.SetActive(false);
+            piernaL.SetActive(true);
+        }
+    }
 }
