@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312013, g: 0.3807403, b: 0.35872707, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -701,6 +701,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 548981932}
+  m_skin: {fileID: 2100000, guid: a6af7cf838d566643a445cb15f29db67, type: 2}
+  m_skin_light: {fileID: 2100000, guid: 2031d2ee8eee34b51b6e5869190d84b3, type: 2}
+  m_skin_dark: {fileID: 2100000, guid: 4e226d0036a1b4567ad1632178557ec1, type: 2}
+  dropdown: {fileID: 2111439793}
+  piernaL: {fileID: 1399255794}
+  piernaR: {fileID: 1479536113}
 --- !u!1 &574993710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1839,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358754708}
   m_CullTransparentMesh: 0
+--- !u!1 &1399255794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: e46631823161b47ab95042a07529fa9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1130012870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1411764110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,22 +1977,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MF_Pierna_R_3D_rigged
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 4.3749192e-17
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -4.3749192e-17
-      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11499977
@@ -2037,6 +2033,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5905
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 4.3749192e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -4.3749192e-17
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: adf215089c40a4238b33e9776a5c9368, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2046,6 +2058,12 @@ PrefabInstance:
 --- !u!4 &1438550886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: adf215089c40a4238b33e9776a5c9368,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438550885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1479536113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: adf215089c40a4238b33e9776a5c9368,
     type: 3}
   m_PrefabInstance: {fileID: 1438550885}
   m_PrefabAsset: {fileID: 0}
