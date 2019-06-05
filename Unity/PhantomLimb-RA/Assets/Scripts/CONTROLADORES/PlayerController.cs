@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeadController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     Vector2 mouseLook;
     Vector2 smoothV;
@@ -13,7 +13,8 @@ public class HeadController : MonoBehaviour
 
     void Start()
     {
-        character = this.transform.parent.gameObject;
+        //character = this.transform.parent.gameObject;
+        character = this.transform.gameObject;
     }
 
     void Update()
