@@ -13,7 +13,7 @@ public class SettingsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      btnAtras.onClick.AddListener(() => ChangeScene("Main_Menu"));
+        btnAtras.onClick.AddListener(() => ChangeScene("Main_Menu"));
     }
 
     // Update is called once per frame
