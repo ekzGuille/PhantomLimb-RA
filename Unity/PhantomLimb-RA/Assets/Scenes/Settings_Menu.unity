@@ -611,7 +611,6 @@ GameObject:
   m_Component:
   - component: {fileID: 548981931}
   - component: {fileID: 548981932}
-  - component: {fileID: 548981933}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -690,25 +689,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &548981933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548981930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5849f339cf0864f2cb4ae131f30a2c1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 548981932}
-  m_skin: {fileID: 2100000, guid: a6af7cf838d566643a445cb15f29db67, type: 2}
-  m_skin_light: {fileID: 2100000, guid: 2031d2ee8eee34b51b6e5869190d84b3, type: 2}
-  m_skin_dark: {fileID: 2100000, guid: 4e226d0036a1b4567ad1632178557ec1, type: 2}
-  dropdown: {fileID: 2111439793}
-  piernaL: {fileID: 1399255794}
-  piernaR: {fileID: 1479536113}
 --- !u!1 &574993710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1840,7 @@ GameObject:
   - component: {fileID: 1411764113}
   - component: {fileID: 1411764112}
   - component: {fileID: 1411764116}
+  - component: {fileID: 1411764111}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1867,6 +1848,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1411764111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411764110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5849f339cf0864f2cb4ae131f30a2c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 548981932}
+  m_skin: {fileID: 2100000, guid: a6af7cf838d566643a445cb15f29db67, type: 2}
+  m_skin_light: {fileID: 2100000, guid: 2031d2ee8eee34b51b6e5869190d84b3, type: 2}
+  m_skin_dark: {fileID: 2100000, guid: 4e226d0036a1b4567ad1632178557ec1, type: 2}
+  dropdown: {fileID: 2111439793}
+  piernaL: {fileID: 1399255794}
+  piernaR: {fileID: 1479536113}
 --- !u!114 &1411764112
 MonoBehaviour:
   m_ObjectHideFlags: 0
