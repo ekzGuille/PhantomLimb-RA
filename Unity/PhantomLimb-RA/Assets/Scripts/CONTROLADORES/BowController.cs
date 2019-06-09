@@ -6,6 +6,7 @@ public class BowController : MonoBehaviour
 {
     public Animator anim;
     public GameObject bow, arrow;
+    private GameObject originalArrow;
     private float offset;
     public float speed = 0.2f;          //velocidad de tensado
     public const int MAX_WIDTH = 50;    //amplitud máxima de la cuerda
@@ -16,6 +17,13 @@ public class BowController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Rigidbody rb = arrow.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezePosition;
+        originalArrow = Instantiate(arrow);
+        originalArrow.GetComponent<Transform>().SetPositionAndRotation(arrow.GetComponent<Transform>().position, arrow.GetComponent<Transform>().rotation);
+        originalArrow.GetComponent<Transform>().localScale = new Vector3(0.5F, 0.5F, 0.5F);
+        originalArrow.SetActive(false);
+        rb.constraints = RigidbodyConstraints.FreezePositionY;
         ready = true;
         offset = 0;
         anim = GetComponent<Animator>();
@@ -82,15 +90,18 @@ public class BowController : MonoBehaviour
 
     IEnumerator ReiniciarTiro()
     {
+        
         // Reiniciamos cuerda
         bow.transform.Translate((speed * strength * offset), 0, 0);
         offset = 0;
 
         //print(Time.time);
         yield return new WaitForSeconds(3);
-
         //Crear nueva flecha en la posicion original
 
+        arrow = originalArrow;
+        arrow.transform.parent = bow.transform;
+        arrow.SetActive(true);
         //Todo listo
         ready = true;
         
