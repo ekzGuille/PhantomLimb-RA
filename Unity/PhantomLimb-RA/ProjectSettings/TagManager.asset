@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - flecha
+  - puntos
+  - t5
+  - t10
+  - t25
+  - t50
+  - t100
   layers:
   - Default
   - TransparentFX
