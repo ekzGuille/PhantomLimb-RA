@@ -22,6 +22,7 @@ public class BowController : MonoBehaviour
 
         //Configuramos una flecha para clonar las siguientes y la ocultamos
         originalArrow = ClonarFlecha(arrow);
+        originalArrow.name = "originalArrow";
         originalArrow.SetActive(false);
 
         //offset del arco
@@ -62,11 +63,15 @@ public class BowController : MonoBehaviour
         v = new Vector3(0, 0, 1) * Time.deltaTime * 10000;
         rb.AddForce(v * strengthBowHorizontal);
 
+        //Dispersión
+        v = new Vector3(Random.Range(-50, 50), Random.Range(0, 10.0f), Random.Range(-50, 50)) * Time.deltaTime * 400;
+        rb.AddForce(v);
 
 
         //esperar 2-3 segundos y reiniciar posicion arco y flecha
         estadoJugador = 2;
         StartCoroutine(Recargar());
+        StartCoroutine(DestruirFlecha(arrow));
     }
 
     public void Tensar()
@@ -105,12 +110,19 @@ public class BowController : MonoBehaviour
         estadoJugador = 0;
     }
 
+    IEnumerator DestruirFlecha(GameObject flecha)
+    {
+        yield return new WaitForSeconds(15);
+        Destroy(flecha);
+    }
+
     private GameObject ClonarFlecha(GameObject flechaOriginal)
     {
         GameObject nuevaFlecha;
         //Clonamos el objeto
         nuevaFlecha = Instantiate(arrow);
         nuevaFlecha.name = "Flecha";
+        nuevaFlecha.tag = "flecha";
         //Congelamos una de las coordenadas para que no se caiga al vacío
         Rigidbody rb = nuevaFlecha.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezePositionY;
