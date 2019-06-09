@@ -308,7 +308,9 @@ MonoBehaviour:
   anim: {fileID: 0}
   bow: {fileID: 1295625722}
   arrow: {fileID: 1941239938}
-  speed: 0.1
+  strengthBowVertical: 1
+  strengthBowHorizontal: 15
+  sensibility: 0.2
 --- !u!1001 &1006565254
 PrefabInstance:
   m_ObjectHideFlags: 0

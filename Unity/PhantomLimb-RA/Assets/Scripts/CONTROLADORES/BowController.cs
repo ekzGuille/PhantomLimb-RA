@@ -8,24 +8,25 @@ public class BowController : MonoBehaviour
     public GameObject bow, arrow;
     private GameObject originalArrow;
     private float offset;
-    public float speed = 0.2f;          //velocidad de tensado
+    public float strengthBowVertical, strengthBowHorizontal;        //fuerza de la flecha
+    public float sensibility = 0.2f;          //velocidad de tensado
     public const int MAX_WIDTH = 50;    //amplitud máxima de la cuerda
 
     private float strength = 1;         //fuerza que ejerce el paciente (recibido dsd el arduino)
-    private bool ready;
+    private int estadoJugador = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezePosition;
-        originalArrow = Instantiate(arrow);
-        originalArrow.GetComponent<Transform>().SetPositionAndRotation(arrow.GetComponent<Transform>().position, arrow.GetComponent<Transform>().rotation);
-        originalArrow.GetComponent<Transform>().localScale = new Vector3(0.5F, 0.5F, 0.5F);
+        Application.targetFrameRate = 60;
+
+        //Configuramos una flecha para clonar las siguientes y la ocultamos
+        originalArrow = ClonarFlecha(arrow);
         originalArrow.SetActive(false);
-        rb.constraints = RigidbodyConstraints.FreezePositionY;
-        ready = true;
+
+        //offset del arco
         offset = 0;
+        
         anim = GetComponent<Animator>();
 
         //configurar señal arduino
@@ -35,18 +36,18 @@ public class BowController : MonoBehaviour
     void Update()
     {
         //señal arduino
-        if (ready)
+        if (estadoJugador == 0)
         {
             Tensar();
-        } else
+        } else if(estadoJugador == 1)
         {
-            ThrowArrow();
+            Disparar();
         }
 
        
     }
 
-    public void ThrowArrow()
+    public void Disparar()
     {
         //1º Desvinculamos la flecha del arco
         arrow.transform.parent = null;
@@ -55,16 +56,17 @@ public class BowController : MonoBehaviour
         Rigidbody rb = arrow.GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.None;
 
-        Vector3 v = new Vector3(0, 1, 0) * Time.deltaTime;
-        rb.AddForce(v * 100);
+        Vector3 v = new Vector3(0, 1, 0) * Time.deltaTime * 10000;
+        rb.AddForce(v * strengthBowVertical);
 
-        v = new Vector3(0, 0, 1) * Time.deltaTime;
-        rb.AddForce(v * 15000);
+        v = new Vector3(0, 0, 1) * Time.deltaTime * 10000;
+        rb.AddForce(v * strengthBowHorizontal);
 
 
 
         //esperar 2-3 segundos y reiniciar posicion arco y flecha
-        StartCoroutine(ReiniciarTiro());
+        estadoJugador = 2;
+        StartCoroutine(Recargar());
     }
 
     public void Tensar()
@@ -72,40 +74,58 @@ public class BowController : MonoBehaviour
         if (Input.GetKey("1") && offset < MAX_WIDTH)
         {
             offset++;
-            bow.transform.Translate(-speed * strength, 0, 0);
+            bow.transform.Translate(-sensibility * strength, 0, 0);
         }
         else if (!Input.GetKey("1") && offset != 0)
         {
             offset--;
-            bow.transform.Translate(speed * strength, 0, 0);
+            bow.transform.Translate(sensibility * strength, 0, 0);
         }
 
         //Cuando llegue al MAX_WIDTH , evitar el tensado
         if (offset >= MAX_WIDTH)
         {
-            ready = false;
+            estadoJugador = 1;
         }
     }
 
 
-    IEnumerator ReiniciarTiro()
+    IEnumerator Recargar()
     {
         
         // Reiniciamos cuerda
-        bow.transform.Translate((speed * strength * offset), 0, 0);
+        bow.transform.Translate((sensibility * strength * offset), 0, 0);
         offset = 0;
-
-        //print(Time.time);
+        
         yield return new WaitForSeconds(3);
         //Crear nueva flecha en la posicion original
-
-        arrow = originalArrow;
-        arrow.transform.parent = bow.transform;
+        arrow = ClonarFlecha(originalArrow);
         arrow.SetActive(true);
         //Todo listo
-        ready = true;
-        
-
-        //print(Time.time);
+        estadoJugador = 0;
     }
+
+    private GameObject ClonarFlecha(GameObject flechaOriginal)
+    {
+        GameObject nuevaFlecha;
+        //Clonamos el objeto
+        nuevaFlecha = Instantiate(arrow);
+        nuevaFlecha.name = "Flecha";
+        //Congelamos una de las coordenadas para que no se caiga al vacío
+        Rigidbody rb = nuevaFlecha.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezePositionY;
+
+        //Posicionamos la nueva flecha donde está la original
+        nuevaFlecha.GetComponent<Transform>().SetPositionAndRotation(flechaOriginal.GetComponent<Transform>().position, flechaOriginal.GetComponent<Transform>().rotation);
+        nuevaFlecha.GetComponent<Transform>().localScale = new Vector3(0.5F, 0.5F, 0.5F);
+
+        //La adjuntamos con el arco
+        nuevaFlecha.GetComponent<Transform>().SetParent(bow.GetComponent<Transform>());
+
+        //La ocultamos
+        nuevaFlecha.SetActive(false);
+
+        return nuevaFlecha;
+    }
+    
 }
