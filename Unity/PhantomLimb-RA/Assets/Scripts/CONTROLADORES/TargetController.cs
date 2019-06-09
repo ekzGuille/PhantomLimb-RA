@@ -22,6 +22,7 @@ public class TargetController : MonoBehaviour
         {
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             rb.constraints = RigidbodyConstraints.FreezeAll;
+            collision.gameObject.GetComponent<Transform>().SetParent(gameObject.GetComponent<Transform>());
             //Destroy(gameObject);
         }
     }

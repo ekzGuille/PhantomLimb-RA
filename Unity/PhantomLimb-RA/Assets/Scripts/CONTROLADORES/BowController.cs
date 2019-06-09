@@ -15,10 +15,15 @@ public class BowController : MonoBehaviour
     private float strength = 1;         //fuerza que ejerce el paciente (recibido dsd el arduino)
     private int estadoJugador = 0;
 
+    public static int points;
+
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
+
+        //Puntuacion
+        points = 0;
 
         //Configuramos una flecha para clonar las siguientes y la ocultamos
         originalArrow = ClonarFlecha(arrow);
