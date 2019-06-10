@@ -19,3 +19,31 @@ La finalidad del proyecto es ayudar a la rehabilitación de un paciente que ha s
 
 * [Guillermo Sesé](https://github.com/ekzGuille)
 * [Alberto Mareca](https://github.com/Ag3nte)
+
+
+## Demos
+
+### Menú inicial
+![](https://giant.gfycat.com/ConfusedOpenCanine.gif)
+
+### Menú ajustes
+![](https://giant.gfycat.com/MiserableFlawedAsianpiedstarling.gif)
+
+### Modo entreno
+![](https://giant.gfycat.com/ComplicatedZestyAnnelid.gif)
+
+### Modo libre
+![](https://giant.gfycat.com/LinearPaltryAdeliepenguin.gif)
+
+
+## Otros enlaces de interés
+
+* [Using MyoWare: a low-cost surface electromyography sensor for developing rehabilitation devices (Tutorial)](https://medium.com/physiatry/using-myoware-a-low-cost-surface-electromyography-sensor-for-developing-rehabilitation-devices-1d04a16f5396) - *George Marzloff*
+
+* [MUSCLE CONTROL V1.2](https://openbionicslabs.com/obtutorials/muscle-control-v1-2) - *Open bionics*
+
+* [DIY ECG Machine On The Cheap](https://www.swharden.com/wp/2009-08-14-diy-ecg-machine-on-the-cheap/) - *Scott W Harden*
+
+* [DIY ECG With 1 Op-Amp](https://www.swharden.com/wp/2016-08-08-diy-ecg-with-1-op-amp/) - *Scott W Harden*
+
+* [DIY ECG EKG Portable Heart Monitor](https://www.instructables.com/id/DIY-ECG-EKG-Portable-Heart-Monitor/) - *qthurtle*
