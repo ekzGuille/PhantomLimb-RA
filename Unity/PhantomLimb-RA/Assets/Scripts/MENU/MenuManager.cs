@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public Button btnStart;
+    public Button btnEntreno;
     public Button btnOptions;
     public Button btnExit;
+    public Button btnModoLibre;
 
     // Start is called before the first frame update
     void Start()
     {
-        btnStart.onClick.AddListener(() => ChangeScene("GameScene"));
+        btnEntreno.onClick.AddListener(() => ChangeScene("ShootingMiniGame"));
+        btnModoLibre.onClick.AddListener(() => ChangeScene("GameScene"));
         btnOptions.onClick.AddListener(() => ChangeScene("Settings_Menu"));
         btnExit.onClick.AddListener(Application.Quit);
     }
