@@ -12,11 +12,11 @@ revealOptions:
 <div style="display: flex" class="dark-bg fragment">
   <div style="width:49%">
     <span>Alberto Mareca</span>
-    <img style="width: 300px;;;;;;;;;;;;;;;;;;" src="assets/images/amareca.png" alt="mareca">  
+    <img style="width: 300px;" src="assets/images/amareca.png" alt="mareca">  
   </div>
   <div style="width:49%">
     <span>Guillermo Sesé</span>
-    <img style="width: 300px;;;;;;;;;;;;;;;;;;" src="assets/images/gsese.png" alt="sese">  
+    <img style="width: 300px;" src="assets/images/gsese.png" alt="sese">  
   </div>
 </div>
 
