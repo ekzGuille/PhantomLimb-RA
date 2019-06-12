@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>PhantomLimb</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+# Phantom Limb
+<!-- .slide: data-background-video="https://cdn.flixel.com/flixel/yh4hh7nevbdxewyuuxiy.tablet.mp4" data-background-video-loop="loop" data-background-video-muted --></script></section><section  data-markdown><script type="text/template"># ¿Quiénes somos?
+
+<div style="display: flex" class="dark-bg fragment">
+  <div style="width:49%">
+    <span>Alberto Mareca</span>
+    <img style="width: 300px;" src="assets/images/amareca.png" alt="mareca">  
+  </div>
+  <div style="width:49%">
+    <span>Guillermo Sesé</span>
+    <img style="width: 300px;" src="assets/images/gsese.png" alt="sese">  
+  </div>
+</div>
+
+<aside class="notes"><p>Mi estructura pensada es: equipo - motivo - idea/proyecto - manual de uso - herramientas utilizadas (GIFs/Videos/Funcionamiento) - viabilidad - planes - fin</p>
+</aside></script></section><section  data-markdown><script type="text/template"># Nuestro proyecto
+<!-- .slide: data-background-video="https://cdn.flixel.com/flixel/40znjlquy1t6aux32ycs.tablet.mp4" data-background-video-loop="loop" data-background-video-muted --></script></section><section ><section data-markdown><script type="text/template"># Herramientas
+<!-- .slide: data-background-video="https://cdn.flixel.com/flixel/1v70zgbduikjfw38fnm0.tablet.mp4" data-background-video-loop="loop" data-background-video-muted --></script></section><section data-markdown><script type="text/template">## Electrónica
+* Sensores MyoWare
+* Arduino UNO
+* C </script></section><section data-markdown><script type="text/template">## Diseño
+* Blender
+* Unity
+* C#</script></section></section><section ><section data-markdown><script type="text/template">
+<h1 style="color: white; text-shadow: -1px -1px 300px #000, 1px -1px 300px #000, -1px 1px 300px #000, 1px 1px 300px #000;">
+  FUNCIONAMIENTO</h1>
+  <!-- .slide: data-background-video="https://cdn.flixel.com/flixel/eb8823rs4soz8p6hdmpl.tablet.mp4" data-background-video-loop="loop" data-background-video-muted --></script></section><section data-markdown><script type="text/template">### Menú inicial
+<img src="https://giant.gfycat.com/ConfusedOpenCanine.gif"></img></script></section><section data-markdown><script type="text/template">### Menú ajustes
+<img src="https://giant.gfycat.com/MiserableFlawedAsianpiedstarling.gif"></img></script></section><section data-markdown><script type="text/template">### Modo entreno
+<img src="https://giant.gfycat.com/ComplicatedZestyAnnelid.gif"></img></script></section><section data-markdown><script type="text/template">### Modo libre
+<img src="https://giant.gfycat.com/LinearPaltryAdeliepenguin.gif"></img>
+</script></section></section><section  data-markdown><script type="text/template"><h1 style="color: #272822">¿Dudas?</h1>
+<!-- .slide: data-background-video="https://cdn.flixel.com/flixel/imw4b2wdt87wnj4h863h.tablet.mp4" data-background-video-loop="loop" data-background-video-muted --></script></section><section  data-markdown><script type="text/template"><h2 style="color: white; text-shadow: -1px -1px 25px #000, 1px -1px 25px #000, -1px 1px 25px #000, 1px 1px 25px #000;">MUCHAS GRACIAS</h2>
+<img style="background:none; border:none; box-shadow:none;" src="https://media2.giphy.com/media/3aRilV33fWkUw/giphy.gif" alt="agradecimiento"/>
+<div style="position: absolute; right: 20px; top: 450px;">
+  <div>Guillermo Sesé
+    <span style="font-size: 0.7em; margin-left: 20px;">
+      <img style="background:none; border:none; box-shadow:none; width:30px; margin: -4px 0px;" src="assets/images/github.png" alt="github"/>
+      <a style="text-decoration: underline; color: #FFF;" href="https://github.com/ekzGuille/" target="_blank">ekzGuille</a> 
+    </span>
+  </div>
+  <div>Alberto Mareca
+    <span style="font-size: 0.7em; margin-left: 20px;">
+      <img style="background:none; border:none; box-shadow:none; width:30px; margin: -4px 0px;" src="assets/images/github.png" alt="github">
+      <a style="text-decoration: underline; color: #FFF;" href="https://github.com/Ag3nte/" target="_blank">Ag3nte</a> 
+    </span>
+  </div>
+</div>
+<!-- .slide: data-background-video="https://cdn.flixel.com/flixel/6lg4grqag3u8qciyk7p8.tablet.mp4" data-background-video-loop="loop" data-background-video-muted -->
+</script></section></div>
+    </div>
+
+    <script src="./lib/js/head.min.js"></script>
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"zoom","controls":false}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
