@@ -6,6 +6,7 @@
 
 //Pin en el que se ha conectado el sensor
 int inputPin = A5;
+int contador = 1;
 
 void setup(){
   //Baud rates:300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, or 115200
@@ -13,9 +14,23 @@ void setup(){
 }
 
 void loop(){
-  Serial.println(analogRead(inputPin));
-  
-  delay(10);
+    contador = contador + 2;
+    // Habra que hacer un Serial.write() del analogRead()
+    
+    /*
+     * El Serial.write() se utiliza para envío de datos "crudos" entre componentes,
+     * para el envío de datos legibles por el humano se emplea Serial.println()
+     * 
+     * En Unity se lee de distinta manera:
+     * Serial.write() ---> serial.ReadByte();
+     * Serial.println() ---> serial.ReadLine();
+     * 
+     * 
+     */
+    
+    //Serial.println(analogRead(inputPin));  
+    Serial.println(contador);
+    delay(500);
 }
 
 //int onboardLED = 13;            // Arduino onboard LED (pin 13) you can control
