@@ -2,7 +2,7 @@
 
 *Proyecto final para el Ciclo Formativo Superior de Desarrollo de Aplicaciones Multiplataforma para [Fundación San Valero](https://www.sanvalero.es/) en colaboración con la [Universidad San Jorge](https://www.usj.es/).*
 
-La finalidad del proyecto es ayudar a la rehabilitación de un paciente que ha sufrido una amputación. Se recreará su extremidad en Realidad Aumentada y se capturarán sus movimientos mediante un EMG (Electromiografía).
+La finalidad del proyecto es ayudar a la rehabilitación de un paciente que ha sufrido una amputación. Se recreará su extremidad en Realidad Aumentada y se capturarán sus movimientos mediante un EMG ([Electromiografía](https://es.wikipedia.org/wiki/Electromiograf%C3%ADa)).
 
 ## Material
 
