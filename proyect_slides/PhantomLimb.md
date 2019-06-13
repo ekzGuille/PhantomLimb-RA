@@ -74,12 +74,10 @@ Note: * La idea es aplicar la **tecnología** a una técnica *"tradicional"*.
 <!-- .slide: data-background-video="https://cdn.flixel.com/flixel/7a0iejyutuuc9p8rdss3.tablet.mp4" data-background-video-loop="loop" data-background-video-muted -->
 ----
 ### Sensor muscular
-<img style="background:none; border:none; box-shadow:none; width: 800px;" src="https://giant.gfycat.com/.gif" alt="instrucciones sensor"></img>
-Note: Hacer gif de: https://youtu.be/TW4uw5EmYKQ?t=131
+<img style="background:none; border:none; box-shadow:none; width: 800px;" src="https://giant.gfycat.com/UnkemptPeskyLeopardseal.gif" alt="instrucciones sensor"></img>
 ----
 ### Arduino
-<img style="background:none; border:none; box-shadow:none; width: 800px;" src="https://giant.gfycat.com/.gif" alt="lectura de datos arduino"></img>
-Note: Hacer gif de: https://youtu.be/8t-eQIotF5E?t=90
+<img style="background:none; border:none; box-shadow:none; width: 800px;" src="https://giant.gfycat.com/ShimmeringTimelyCatbird.gif" alt="lectura de datos arduino"></img>
 ----
 ### Conexión al PC
 <img style="background:none; border:none; box-shadow:none; width: 400px;" src="https://media.giphy.com/media/9s6BcL4XSgzuM/giphy.gif" alt="lectura de datos arduino"></img>
