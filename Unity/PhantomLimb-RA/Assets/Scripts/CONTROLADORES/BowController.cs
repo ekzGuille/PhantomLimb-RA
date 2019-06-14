@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO.Ports;
 
 public class BowController : MonoBehaviour
 {
@@ -10,12 +11,17 @@ public class BowController : MonoBehaviour
     private float offset;
     public float strengthBowVertical, strengthBowHorizontal;        //fuerza de la flecha
     public float sensibility = 0.2f;          //velocidad de tensado
-    public const int MAX_WIDTH = 50;    //amplitud máxima de la cuerda
+    public const int MAX_WIDTH = 20;    //amplitud máxima de la cuerda
 
     private float strength = 1;         //fuerza que ejerce el paciente (recibido dsd el arduino)
     private int estadoJugador = 0;
 
     public static int points;
+
+    public static float  FUERZA = 0f;
+    public static float sensibilidadArduino = 16500;
+
+    SerialPort serial = new SerialPort("COM3", 9600);
 
     // Start is called before the first frame update
     void Start()
@@ -36,11 +42,18 @@ public class BowController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         //configurar señal arduino
+        serial.Open();
+        serial.ReadTimeout = 7;
     }
 
     // Update is called once per frame
     void Update()
     {
+        FUERZA = GetArduinoSignal();
+        if (FUERZA > sensibilidadArduino)
+        {
+            //strength = 1 + FUERZA/35000; 
+        }
         //señal arduino
         if (estadoJugador == 0)
         {
@@ -81,12 +94,12 @@ public class BowController : MonoBehaviour
 
     public void Tensar()
     {
-        if (Input.GetKey("1") && offset < MAX_WIDTH)
+        if (FUERZA >= sensibilidadArduino && offset < MAX_WIDTH)
         {
             offset++;
             bow.transform.Translate(-sensibility * strength, 0, 0);
         }
-        else if (!Input.GetKey("1") && offset != 0)
+        else if (offset != 0)
         {
             offset--;
             bow.transform.Translate(sensibility * strength, 0, 0);
@@ -144,5 +157,26 @@ public class BowController : MonoBehaviour
 
         return nuevaFlecha;
     }
-    
+
+    public float GetArduinoSignal()
+    {
+        float signal = 0;
+        if (serial.IsOpen)
+        {
+            try
+            {
+                signal = float.Parse(serial.ReadLine());
+                Debug.Log("Esto es la lectura del arduino : " + signal);
+                return signal;
+            }
+            catch (System.Exception)
+            {
+                Debug.Log("Error en la lectura.");
+            }
+        }
+
+        return signal;
+    }
+
+
 }
