@@ -28,8 +28,8 @@ void loop(){
      * 
      */
     
-    //Serial.println(analogRead(inputPin));  
-    Serial.println(contador);
+    Serial.println(analogRead(inputPin));  
+    //Serial.println(contador);
     delay(500);
 }
 
