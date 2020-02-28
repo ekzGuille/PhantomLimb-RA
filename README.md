@@ -18,7 +18,7 @@ La finalidad del proyecto es ayudar a la rehabilitación de un paciente que ha s
 ## Autores del proyecto
 
 * [Guillermo Sesé](https://github.com/ekzGuille)
-* [Alberto Mareca](https://github.com/Ag3nte)
+* [Alberto Mareca](https://github.com/amareca)
 
 
 ## Demos
