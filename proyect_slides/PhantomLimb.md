@@ -164,7 +164,7 @@ Note: * Proyecto con ciertas dificultades:
   <div>Alberto Mareca
     <span style="font-size: 0.7em; margin-left: 20px;">
       <img style="background:none; border:none; box-shadow:none; width:30px; margin: -8px 0px;" src="assets/images/github.png" alt="github">
-      <a style="text-decoration: underline; color: #FFF;" href="https://github.com/Ag3nte/" target="_blank">Ag3nte</a> 
+      <a style="text-decoration: underline; color: #FFF;" href="https://github.com/amareca/" target="_blank">Ag3nte</a> 
     </span>
   </div>
   <div>
