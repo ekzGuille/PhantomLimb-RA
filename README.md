@@ -24,16 +24,16 @@ La finalidad del proyecto es ayudar a la rehabilitación de un paciente que ha s
 ## Demos
 
 ### Menú inicial
-![](https://giant.gfycat.com/ConfusedOpenCanine.gif)
+![](https://giant.gfycat.com/ConfusedOpenCanine.mp4)
 
 ### Menú ajustes
-![](https://giant.gfycat.com/MiserableFlawedAsianpiedstarling.gif)
+![](https://giant.gfycat.com/MiserableFlawedAsianpiedstarling.mp4)
 
 ### Modo entreno
-![](https://giant.gfycat.com/ComplicatedZestyAnnelid.gif)
+![](https://giant.gfycat.com/ComplicatedZestyAnnelid.mp4)
 
 ### Modo libre
-![](https://giant.gfycat.com/LinearPaltryAdeliepenguin.gif)
+![](https://giant.gfycat.com/LinearPaltryAdeliepenguin.mp4)
 
 
 ## Otros enlaces de interés
